@@ -1,0 +1,81 @@
+CREATE TABLE employees(
+    id NUMBER(38) not NULL,
+    name VARCHAR2(50),
+    area0 NUMBER(1),
+    area1 NUMBER(1),
+    area2 NUMBER(1),
+    area3 NUMBER(1),
+    area4 NUMBER(1),
+    area5 NUMBER(1),
+    area6 NUMBER(1),
+    area7 NUMBER(1),
+    pin VARCHAR2(8)
+);
+/
+
+CREATE TABLE worked_days (
+    id NUMBER(38) not NULL,
+    id_employee NUMBER(38) not NULL,
+    day_date  DATE,
+    hours_worked NUMBER(38),
+    minutes_worked NUMBER(38)
+);
+/
+
+CREATE SEQUENCE worked_days_seq START WITH 1 INCREMENT BY 1
+
+CREATE OR REPLACE TRIGGER trg_generate_id_worked_days
+BEFORE INSERT ON worked_days
+FOR EACH ROW
+BEGIN
+    :NEW.id := worked_days_seq.NEXTVAL;
+END;
+/
+
+CREATE SEQUENCE employees_seq START WITH 1 INCREMENT BY 1
+
+CREATE OR REPLACE TRIGGER trg_generate_id_employee
+BEFORE INSERT ON employees
+FOR EACH ROW
+BEGIN
+    :NEW.id := employees_seq.NEXTVAL;
+END;
+/
+
+
+Select  * from employees; 
+/
+Select * from worked_days;
+/
+
+DESCRIBE worked_days;
+/
+DESCRIBE employees;
+/
+
+/*INSERTS*/
+
+INSERT INTO worked_days (id_employee, day_date, hours_worked, minutes_worked) VALUES (41, to_date('2023-03-01', 'YYYY-MM-DD'),7, 32);
+/
+INSERT INTO worked_days (id_employee, day_date, hours_worked, minutes_worked) VALUES (41, to_date('2023-03-02', 'YYYY-MM-DD'),7, 32);
+/
+INSERT INTO worked_days (id_employee, day_date, hours_worked, minutes_worked) VALUES (41, to_date('2023-03-03', 'YYYY-MM-DD'),7, 32);
+/
+INSERT INTO worked_days (id_employee, day_date, hours_worked, minutes_worked) VALUES (41, to_date('2023-03-06', 'YYYY-MM-DD'),7, 32);
+/
+INSERT INTO worked_days (id_employee, day_date, hours_worked, minutes_worked) VALUES (41, to_date('2023-03-30', 'YYYY-MM-DD'),7, 32);
+/
+/INSERT INTO worked_days (id_employee, day_date, hours_worked, minutes_worked) VALUES (41, to_date('2023-03-25', 'YYYY-MM-DD'),4, 32);
+/
+
+/*.....*/
+INSERT INTO worked_days (id_employee, day_date, hours_worked, minutes_worked) VALUES (42, to_date('2023-03-31', 'YYYY-MM-DD'),7, 32);
+/
+ 
+INSERT INTO worked_days (id_employee, day_date, hours_worked, minutes_worked) VALUES (41, to_date('2023-03-06', 'YYYY-MM-DD'),7, 32);
+
+
+
+
+
+

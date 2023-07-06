@@ -1,0 +1,104 @@
+.root {
+    -fx-background-color: #d5dbee;
+    -fx-background-size: cover;
+}
+
+.my-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-padding: 40px;
+    -fx-alignment: center;
+    -fx-text-fill: #1c2120;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+
+.text-field {
+    -fx-background-color: #fffefe;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+    -fx-pref-width: 100px;
+    -fx-text-fill: #000000;
+    -fx-font-size: 16px !important;
+}
+
+.text-field:focus {
+    -fx-background-color: #ffffff !important;
+}
+
+.my-button {
+    -fx-background-color: #363763;
+    -fx-text-fill: #FEFEFE;
+    -fx-font-size: 20px;
+    -fx-padding: 16px 32px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-weight: bold;
+}
+
+.my-button:hover {
+    -fx-background-color: #4d4b74;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(two-pass-box, rgba(0, 0, 0, 0.3), 3, 3, 3, 0);
+}
+
+.my-hbox {
+    -fx-alignment: center;
+    -fx-spacing: 50px;
+}
+
+.my-flowpane {
+    -fx-padding: 20px;
+}
+
+.error-label {
+    -fx-text-fill: black;
+    -fx-background-color: red;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+}
+
+.label1 {
+    -fx-font-size: 22px;
+    -fx-background-color: #363763;
+    -fx-text-fill: #FEFEFE;
+}
+
+.label2 {
+    -fx-font-size: 22px;
+    -fx-background-color: #363763;
+    -fx-text-fill: #FEFEFE;
+}
+
+.long-label {
+    -fx-font-size: 18px;
+    -fx-background-color: #363763;
+    -fx-text-fill: #FEFEFE;
+}
+
+.my-card {
+    -fx-background-color: #363763;
+    -fx-text-fill: #FEFEFE;
+    -fx-font-size: 20px;
+    -fx-padding: 16px 32px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-weight: bold;
+}
+
+.my-vbox {
+
+    -fx-padding: 400px;
+}
+
+.succes-label {
+    -fx-text-fill: black;
+    -fx-background-color: rgb(33, 199, 11);
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+}

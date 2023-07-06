@@ -1,0 +1,12 @@
+Digest for BagdeEmployee/javacard/Directory.cap		[SHA-256: ec6f1fc73d88a95297a4e66c1dcbcbc3be9564d60edd65449a265e664a6a7be4]
+Digest for BagdeEmployee/javacard/Descriptor.capx		[SHA-256: 92333fd07637838cdb59fabc7888947964eabbe2043145dbd4a868af48e68dac]
+Digest for BagdeEmployee/javacard/Applet.cap		[SHA-256: 6168b20e8fc5799e58b278959eba019f64d5bc9059dc98f06ec50d803d8e2f73]
+Digest for BagdeEmployee/javacard/Class.cap		[SHA-256: 153dfd79098abb2c42036e2a501a4b40418f96a300369d4960a72f275bec5798]
+Digest for BagdeEmployee/javacard/StaticField.cap		[SHA-256: 5863e9740af5fb905922380b2aa88309a16a285dd3412417ae8af941327901ee]
+Digest for BagdeEmployee/javacard/Debug.capx		[SHA-256: e9fd15eb488144fac1c7cf6a4c7d1444e9b3f9c860a98f2cf686a292c2936e3f]
+Digest for BagdeEmployee/javacard/Import.cap		[SHA-256: 666d218031ff8ddccf1d96ab524cc4814952278d533b2073f27b42f51ff93253]
+Digest for BagdeEmployee/javacard/Method.capx		[SHA-256: 5382682d5b68f98b6e4c5a24bf12ef23e13310bc2ee26817be7538534daa5c2c]
+Digest for BagdeEmployee/javacard/RefLocation.capx		[SHA-256: 72bc0cd78dd30ec6254cc8ef2b89091331499f378f773df725b8dff315c602e1]
+Digest for BagdeEmployee/javacard/ConstantPool.cap		[SHA-256: 898b98b9a1ecf58d3e68de613841bbe0c163bda09ef9d79aae7a251bdf188c58]
+Digest for BagdeEmployee/javacard/Header.cap		[SHA-256: b594fc6f730c1a2b06cf97f95a5152641321432dcb4b9a24e6d8212ad9b27639]
+Verification completed with 0 warnings and 0 errors.

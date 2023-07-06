@@ -1,0 +1,12 @@
+// Copyright (c) 1998, 2021, Oracle and/or its affiliates. All rights reserved.
+
+// Applet Selection APDU Script
+//
+// Package:     BagdeEmployee
+// Package AID: //aid/0A00000000/0A000203040506070809
+// Applet:      com.card.applet.BadgeEmployee
+// Applet AID:  //aid/0A00000000/0A000203040506070801
+//
+
+// Select com.card.applet.BadgeEmployee applet
+0x00 0xA4 0x04 0x00 0x0F 0x0A 0x00 0x00 0x00 0x00 0x0A 0x00 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x01 0x7F;

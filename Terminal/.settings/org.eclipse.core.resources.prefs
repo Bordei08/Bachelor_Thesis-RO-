@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//src/Terminal.java=UTF-8
+encoding//src/cardObjects/Card.java=UTF-8
+encoding//src/dataBase/DatabaseUtil.java=UTF-8
+encoding//src/graphicInterface/CreateUsecasePage.java=UTF-8
+encoding//src/graphicInterface/EmployeesMeniu.java=UTF-8
+encoding//src/graphicInterface/EntryInCompanyMeniu.java=UTF-8
+encoding//src/graphicInterface/GUIApplication.java=UTF-8
+encoding//src/graphicInterface/InCompanyMeniu.java=UTF-8
+encoding//src/graphicInterface/SelectDateMeniu.java=UTF-8
+encoding//src/utilObjects/DateProvider.java=UTF-8
+encoding//src/utilObjects/Usecase.java=UTF-8

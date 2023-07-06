@@ -1,0 +1,1090 @@
+// converted by version  [v3.1.0]
+// on Wed Jun 28 01:15:24 EEST 2023
+
+.package com/card/applet {
+	.aid 0xA:0x0:0x1:0x0:0x0:0xA:0x1:0x2:0x3:0x4:0x5:0x6:0x7:0x8:0x9:0x1;
+	.version 3.1;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x1 1.8;		//javacard/framework
+		0xA0:0x0:0x0:0x0:0x62:0x2:0x8:0x7 1.0;		//javacardx/framework/time
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+	}
+
+	.applet {
+		0xA:0x0:0x0:0x0:0x0:0xA:0x0:0x2:0x3:0x4:0x5:0x6:0x7:0x8:0x1 BadgeEmployee;
+	}
+
+	.constantPool {
+		// 0
+		instanceFieldRef 0.9 BadgeEmployee/pin;
+		// 1
+		instanceFieldRef byte BadgeEmployee/id;
+		// 2
+		instanceFieldRef byte[] BadgeEmployee/acces_areas;
+		// 3
+		instanceFieldRef short BadgeEmployee/hours_worked_today;
+		// 4
+		instanceFieldRef short BadgeEmployee/minutes_worked_today;
+		// 5
+		instanceFieldRef byte BadgeEmployee/hours_worked_current_month;
+		// 6
+		instanceFieldRef byte BadgeEmployee/minutes_worked_current_month;
+		// 7
+		instanceFieldRef byte BadgeEmployee/in_company;
+		// 8
+		instanceFieldRef byte BadgeEmployee/current_area;
+		// 9
+		instanceFieldRef 1.2 BadgeEmployee/start_time;
+		// 10
+		instanceFieldRef 1.2 BadgeEmployee/end_time;
+		// 11
+		staticMethodRef 0.7.1(S)V;		// javacard/framework/ISOException.throwIt(S)V
+		// 12
+		staticMethodRef 0.9.0(BB)V;		// javacard/framework/OwnerPIN.<init>(BB)V
+		// 13
+		staticMethodRef 0.3.0()V;		// javacard/framework/Applet.<init>()V
+		// 14
+		virtualMethodRef 0.3.1()V;		// register()V
+		// 15
+		.classRef BadgeEmployee;
+		// 16
+		staticMethodRef BadgeEmployee/<init>([BSB)V;
+		// 17
+		virtualMethodRef 0.9.2()B;		// getTriesRemaining()B
+		// 18
+		virtualMethodRef 0.9.5()V;		// reset()V
+		// 19
+		virtualMethodRef 0.10.1()[B;		// getBuffer()[B
+		// 20
+		virtualMethodRef 0.10.14()Z;		// isISOInterindustryCLA()Z
+		// 21
+		staticMethodRef BadgeEmployee/verify(Ljavacard/framework/APDU;)V;
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+		// 22
+		virtualMethodRef BadgeEmployee/entry_in_area(Ljavacard/framework/APDU;)V;
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+		// 23
+		virtualMethodRef BadgeEmployee/exit_of_area(Ljavacard/framework/APDU;)V;
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+		// 24
+		virtualMethodRef BadgeEmployee/exit_from_company(Ljavacard/framework/APDU;)V;
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+		// 25
+		virtualMethodRef BadgeEmployee/get_informations(Ljavacard/framework/APDU;)V;
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+		// 26
+		virtualMethodRef BadgeEmployee/change_pin(Ljavacard/framework/APDU;)V;
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+		// 27
+		virtualMethodRef BadgeEmployee/check_complete_work(Ljavacard/framework/APDU;)V;
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+		// 28
+		virtualMethodRef BadgeEmployee/check_end_of_the_month(Ljavacard/framework/APDU;)V;
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+		// 29
+		virtualMethodRef 0.10.6()S;		// setIncomingAndReceive()S
+		// 30
+		virtualMethodRef 0.9.1([BSB)Z;		// check([BSB)Z
+		// 31
+		staticMethodRef 1.2.0(B)Ljavacardx/framework/time/TimeDuration;;		// javacardx/framework/time/TimeDuration.getInstance(B)Ljavacardx/framework/time/TimeDuration;
+			.descriptor	Ljavacardx/framework/time/TimeDuration;	1.2;
+
+		// 32
+		virtualMethodRef 0.9.8([BSB)V;		// update([BSB)V
+		// 33
+		staticMethodRef 1.1.0(Ljavacardx/framework/time/TimeDuration;)V;		// javacardx/framework/time/SysTime.uptime(Ljavacardx/framework/time/TimeDuration;)V
+			.descriptor	Ljavacardx/framework/time/TimeDuration;	1.2;
+
+		// 34
+		virtualMethodRef 0.9.4()Z;		// isValidated()Z
+		// 35
+		virtualMethodRef 0.10.7()S;		// setOutgoing()S
+		// 36
+		virtualMethodRef 0.10.9(S)V;		// setOutgoingLength(S)V
+		// 37
+		virtualMethodRef 0.10.4(SS)V;		// sendBytes(SS)V
+		// 38
+		.classRef 0.9;		// javacard/framework/OwnerPIN
+		// 39
+		virtualMethodRef BadgeEmployee/update_time()V;
+		// 40
+		virtualMethodRef 1.2.8(Ljavacardx/framework/time/TimeDuration;)Ljavacardx/framework/time/TimeDuration;;		// minus(Ljavacardx/framework/time/TimeDuration;)Ljavacardx/framework/time/TimeDuration;
+			.descriptor	Ljavacardx/framework/time/TimeDuration;	1.2;
+			.descriptor	Ljavacardx/framework/time/TimeDuration;	1.2;
+
+		// 41
+		virtualMethodRef 1.2.13([BSSS)S;		// toBytes([BSSS)S
+		// 42
+		virtualMethodRef BadgeEmployee/is_the_last_day([B)Z;
+	}
+
+	.class public BadgeEmployee 0 extends 0.3 {		// extends javacard/framework/Applet
+
+		.fields {
+			 0.9 pin 0;		// Ljavacard/framework/OwnerPIN;
+			 byte[] acces_areas 1;		// [B
+			 1.2 start_time 2;		// Ljavacardx/framework/time/TimeDuration;
+			 1.2 end_time 3;		// Ljavacardx/framework/time/TimeDuration;
+			 byte current_area 4;		// B
+			 byte in_company 5;		// B
+			 byte id 6;		// B
+			 short hours_worked_today 7;		// S
+			 short minutes_worked_today 8;		// S
+			 byte hours_worked_current_month 9;		// B
+			 byte minutes_worked_current_month 10;		// B
+			static final byte Badge_Employee_CLA = -128;		// B
+			static final byte VERIFY = 32;		// B
+			static final byte ENTRY_IN_AREA = 48;		// B
+			static final byte EXIT_OF_AREA = 64;		// B
+			static final byte EXIT_FROM_COMPANY = 80;		// B
+			static final byte GET_INFORMATIONS = 112;		// B
+			static final byte CHANGE_PIN = -128;		// B
+			static final byte COMPLETE_WORK = -112;		// B
+			static final byte END_OF_THE_MONTH = 33;		// B
+			static final byte PIN_TRY_LIMIT = 3;		// B
+			static final byte MAX_PIN_SIZE = 8;		// B
+			static final byte MAX_ROOMS_NUMBERS = 8;		// B
+			static final byte PERFECTLY_WORKED = -96;		// B
+			static final byte MINIMUM_HOURS_WORKED = -104;		// B
+			static final short SW_VERIFICATION_FAILED = 25344;		// S
+			static final short SW_SECURITY_STATUS_NOT_SATISFIED = 27010;		// S
+			static final short SW_CONDITIONS_NOT_SATISFIED = 27013;		// S
+			static final short SW_PIN_VERIFICATION_REQUIRED = 25345;		// S
+			static final short SW_WRONG_PARAMETERS = 27392;		// S
+			static final short SW_INCORRECT_DATA_SIZE = -25337;		// S
+			static final short SW_WRONG_DATA = 27264;		// S
+			static final short SW_WRONG_LENGTH = 26368;		// S
+		}
+
+		.publicMethodTable 4 17 {
+			equals(Ljava/lang/Object;)Z 0;
+			register()V 1;
+			register([BSB)V 2;
+			selectingApplet()Z 3;
+			deselect()V 4;
+			getShareableInterfaceObject(Ljavacard/framework/AID;B)Ljavacard/framework/Shareable; 5;
+			select()Z 6;
+			process(Ljavacard/framework/APDU;)V 7;
+			change_pin(Ljavacard/framework/APDU;)V 255;
+			get_informations(Ljavacard/framework/APDU;)V 255;
+			entry_in_area(Ljavacard/framework/APDU;)V 255;
+			exit_of_area(Ljavacard/framework/APDU;)V 255;
+			exit_from_company(Ljavacard/framework/APDU;)V 255;
+			update_time()V 255;
+			check_complete_work(Ljavacard/framework/APDU;)V 255;
+			check_end_of_the_month(Ljavacard/framework/APDU;)V 255;
+			is_the_last_day([B)Z 255;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.method private <init>([BSB)V {
+			.stack 5;
+			.locals 8;
+
+				L0:	aload_0;
+					invokespecial 13;		// javacard/framework/Applet.<init>()V
+					aload_0;
+					new 38;		// javacard/framework/OwnerPIN
+					dup;
+					sconst_3;
+					bspush 8;
+					invokespecial 12;		// javacard/framework/OwnerPIN.<init>(BB)V
+					putfield_a 0;		// reference com/card/applet/BadgeEmployee.pin
+					aload_1;
+					sload_2;
+					baload;
+					sstore 4;
+				L1:	sload_2;
+					sload 4;
+					sadd;
+					sconst_1;
+					sadd;
+					sstore_2;
+					aload_1;
+					sload_2;
+					baload;
+					sstore 5;
+				L2:	sload_2;
+					sload 5;
+					sadd;
+					sconst_1;
+					sadd;
+					sstore_2;
+					aload_1;
+					sload_2;
+					baload;
+					sstore 6;
+				L3:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					aload_1;
+					sload_2;
+					sconst_1;
+					sadd;
+					sload 6;
+					invokevirtual 32;		// update([BSB)V
+					sload_2;
+					sload 6;
+					sadd;
+					sconst_1;
+					sadd;
+					sstore_2;
+					aload_1;
+					sload_2;
+					baload;
+					sstore 7;
+				L4:	sload_2;
+					sload 7;
+					sadd;
+					sstore_2;
+					aload_1;
+					sload_2;
+					baload;
+					sstore 8;
+				L5:	sload 8;
+					putfield_b_this 1;		// byte com/card/applet/BadgeEmployee.id
+					sinc 2 1;
+					aload_1;
+					sload_2;
+					baload;
+					sstore 9;
+				L6:	sload 9;
+					bspush 8;
+					if_scmpeq L8;
+				L7:	sspush 26368;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L8:	aload_0;
+					bspush 8;
+					newarray 11;
+					putfield_a 2;		// reference com/card/applet/BadgeEmployee.acces_areas
+					sinc 2 1;
+					getfield_a_this 2;		// reference com/card/applet/BadgeEmployee.acces_areas
+					sconst_0;
+					aload_1;
+					sload_2;
+					baload;
+					bastore;
+					sinc 2 1;
+					getfield_a_this 2;		// reference com/card/applet/BadgeEmployee.acces_areas
+					sconst_1;
+					aload_1;
+					sload_2;
+					baload;
+					bastore;
+					sinc 2 1;
+					getfield_a_this 2;		// reference com/card/applet/BadgeEmployee.acces_areas
+					sconst_2;
+					aload_1;
+					sload_2;
+					baload;
+					bastore;
+					sinc 2 1;
+					getfield_a_this 2;		// reference com/card/applet/BadgeEmployee.acces_areas
+					sconst_3;
+					aload_1;
+					sload_2;
+					baload;
+					bastore;
+					sinc 2 1;
+					getfield_a_this 2;		// reference com/card/applet/BadgeEmployee.acces_areas
+					sconst_4;
+					aload_1;
+					sload_2;
+					baload;
+					bastore;
+					sinc 2 1;
+					getfield_a_this 2;		// reference com/card/applet/BadgeEmployee.acces_areas
+					sconst_5;
+					aload_1;
+					sload_2;
+					baload;
+					bastore;
+					sinc 2 1;
+					getfield_a_this 2;		// reference com/card/applet/BadgeEmployee.acces_areas
+					bspush 6;
+					aload_1;
+					sload_2;
+					baload;
+					bastore;
+					sinc 2 1;
+					getfield_a_this 2;		// reference com/card/applet/BadgeEmployee.acces_areas
+					bspush 7;
+					aload_1;
+					sload_2;
+					baload;
+					bastore;
+					sinc 2 1;
+					aload_1;
+					sload_2;
+					baload;
+					sstore 10;
+				L9:	sload 10;
+					sconst_2;
+					if_scmpeq L11;
+				L10:	sspush 26368;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L11:	sinc 2 1;
+					aload_0;
+					aload_1;
+					sload_2;
+					baload;
+					putfield_s 3;		// short com/card/applet/BadgeEmployee.hours_worked_today
+					sinc 2 1;
+					aload_1;
+					sload_2;
+					baload;
+					bspush 60;
+					if_scmple L13;
+				L12:	sspush 27264;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L13:	aload_0;
+					aload_1;
+					sload_2;
+					baload;
+					putfield_s 4;		// short com/card/applet/BadgeEmployee.minutes_worked_today
+					sinc 2 1;
+					aload_1;
+					sload_2;
+					baload;
+					sstore 11;
+				L14:	sload 11;
+					sconst_2;
+					if_scmpeq L16;
+				L15:	sspush 26368;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L16:	sinc 2 1;
+					aload_0;
+					aload_1;
+					sload_2;
+					baload;
+					putfield_b 5;		// byte com/card/applet/BadgeEmployee.hours_worked_current_month
+					sinc 2 1;
+					aload_1;
+					sload_2;
+					baload;
+					bspush 60;
+					if_scmple L18;
+				L17:	sspush 27264;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L18:	aload_0;
+					aload_1;
+					sload_2;
+					baload;
+					putfield_b 6;		// byte com/card/applet/BadgeEmployee.minutes_worked_current_month
+					sconst_0;
+					putfield_b_this 7;		// byte com/card/applet/BadgeEmployee.in_company
+					bspush 8;
+					putfield_b_this 8;		// byte com/card/applet/BadgeEmployee.current_area
+					aload_0;
+					invokevirtual 14;		// register()V
+					return;
+		}
+
+		.method public static install([BSB)V 0 {
+			.stack 4;
+			.locals 0;
+
+				L0:	new 15;		// com/card/applet/BadgeEmployee
+					aload_0;
+					sload_1;
+					sload_2;
+					invokespecial 16;		// com/card/applet/BadgeEmployee.<init>([BSB)V
+					return;
+		}
+
+		.method public select()Z 6 {
+			.stack 1;
+			.locals 0;
+
+				L0:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					invokevirtual 17;		// getTriesRemaining()B
+					ifne L2;
+				L1:	sconst_0;
+					sreturn;
+				L2:	sconst_1;
+					sreturn;
+		}
+
+		.method public deselect()V 4 {
+			.stack 1;
+			.locals 0;
+
+				L0:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					invokevirtual 18;		// reset()V
+					return;
+		}
+
+		.method public process(Ljavacard/framework/APDU;)V 7 {
+			.stack 2;
+			.locals 1;
+
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+				L0:	aload_1;
+					invokevirtual 19;		// getBuffer()[B
+					astore_2;
+				L1:	aload_1;
+					invokevirtual 20;		// isISOInterindustryCLA()Z
+					ifeq L5;
+				L2:	aload_2;
+					sconst_1;
+					baload;
+					bspush -92;
+					if_scmpne L4;
+				L3:	return;
+				L4:	sspush 28160;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L5:	aload_2;
+					sconst_0;
+					baload;
+					bspush -128;
+					if_scmpeq L7;
+				L6:	sspush 28160;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L7:	aload_2;
+					sconst_1;
+					baload;
+					slookupswitch L16 8 -128 L13 -112 L14 32 L8 33 L15 48 L9 64 L10 80 L11 112 L12;
+				L8:	aload_0;
+					aload_1;
+					invokespecial 21;		// com/card/applet/BadgeEmployee.verify(Ljavacard/framework/APDU;)V
+					return;
+				L9:	aload_0;
+					aload_1;
+					invokevirtual 22;		// entry_in_area(Ljavacard/framework/APDU;)V
+					return;
+				L10:	aload_0;
+					aload_1;
+					invokevirtual 23;		// exit_of_area(Ljavacard/framework/APDU;)V
+					return;
+				L11:	aload_0;
+					aload_1;
+					invokevirtual 24;		// exit_from_company(Ljavacard/framework/APDU;)V
+					return;
+				L12:	aload_0;
+					aload_1;
+					invokevirtual 25;		// get_informations(Ljavacard/framework/APDU;)V
+					return;
+				L13:	aload_0;
+					aload_1;
+					invokevirtual 26;		// change_pin(Ljavacard/framework/APDU;)V
+					return;
+				L14:	aload_0;
+					aload_1;
+					invokevirtual 27;		// check_complete_work(Ljavacard/framework/APDU;)V
+					return;
+				L15:	aload_0;
+					aload_1;
+					invokevirtual 28;		// check_end_of_the_month(Ljavacard/framework/APDU;)V
+					return;
+				L16:	sspush 27904;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+					return;
+		}
+
+		.method private verify(Ljavacard/framework/APDU;)V {
+			.stack 4;
+			.locals 2;
+
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+				L0:	aload_1;
+					invokevirtual 19;		// getBuffer()[B
+					astore_2;
+				L1:	aload_1;
+					invokevirtual 29;		// setIncomingAndReceive()S
+					s2b;
+					sstore_3;
+				L2:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					aload_2;
+					sconst_5;
+					sload_3;
+					invokevirtual 30;		// check([BSB)Z
+					ifne L4;
+				L3:	sspush 25344;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L4:	getfield_b_this 7;		// byte com/card/applet/BadgeEmployee.in_company
+					ifne L6;
+				L5:	aload_0;
+					sconst_2;
+					invokestatic 31;		// javacardx/framework/time/TimeDuration.getInstance(B)Ljavacardx/framework/time/TimeDuration;
+					putfield_a 9;		// reference com/card/applet/BadgeEmployee.start_time
+					getfield_a_this 9;		// reference com/card/applet/BadgeEmployee.start_time
+					invokestatic 33;		// javacardx/framework/time/SysTime.uptime(Ljavacardx/framework/time/TimeDuration;)V
+				L6:	sconst_1;
+					putfield_b_this 7;		// byte com/card/applet/BadgeEmployee.in_company
+					return;
+		}
+
+		.method public change_pin(Ljavacard/framework/APDU;)V 8 {
+			.stack 4;
+			.locals 3;
+
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+				L0:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					invokevirtual 34;		// isValidated()Z
+					ifne L2;
+				L1:	sspush 25345;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L2:	aload_1;
+					invokevirtual 19;		// getBuffer()[B
+					astore_2;
+				L3:	aload_1;
+					invokevirtual 29;		// setIncomingAndReceive()S
+					s2b;
+					sstore_3;
+				L4:	aload_2;
+					sconst_4;
+					baload;
+					sstore 4;
+				L5:	sload 4;
+					bspush 8;
+					if_scmpgt L9;
+				L6:	sload_3;
+					bspush 8;
+					if_scmpgt L9;
+				L7:	sload 4;
+					sconst_4;
+					if_scmplt L9;
+				L8:	sload_3;
+					sconst_4;
+					if_scmpge L10;
+				L9:	sspush 26368;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L10:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					aload_2;
+					sconst_5;
+					sload_3;
+					invokevirtual 32;		// update([BSB)V
+					return;
+		}
+
+		.method public get_informations(Ljavacard/framework/APDU;)V 9 {
+			.stack 3;
+			.locals 2;
+
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+				L0:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					invokevirtual 34;		// isValidated()Z
+					ifne L2;
+				L1:	sspush 25345;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L2:	aload_1;
+					invokevirtual 19;		// getBuffer()[B
+					astore_2;
+				L3:	aload_1;
+					invokevirtual 35;		// setOutgoing()S
+					sstore_3;
+				L4:	sload_3;
+					bspush 6;
+					if_scmpge L6;
+				L5:	sspush 26368;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+					goto L7;
+				L6:	aload_1;
+					bspush 6;
+					invokevirtual 36;		// setOutgoingLength(S)V
+					aload_2;
+					sconst_0;
+					getfield_b_this 1;		// byte com/card/applet/BadgeEmployee.id
+					bastore;
+					aload_2;
+					sconst_1;
+					getfield_b_this 8;		// byte com/card/applet/BadgeEmployee.current_area
+					bastore;
+					aload_2;
+					sconst_2;
+					getfield_s_this 3;		// short com/card/applet/BadgeEmployee.hours_worked_today
+					s2b;
+					bastore;
+					aload_2;
+					sconst_3;
+					getfield_s_this 4;		// short com/card/applet/BadgeEmployee.minutes_worked_today
+					s2b;
+					bastore;
+					aload_2;
+					sconst_4;
+					getfield_b_this 5;		// byte com/card/applet/BadgeEmployee.hours_worked_current_month
+					bastore;
+					aload_2;
+					sconst_5;
+					getfield_b_this 6;		// byte com/card/applet/BadgeEmployee.minutes_worked_current_month
+					bastore;
+					aload_1;
+					sconst_0;
+					bspush 6;
+					invokevirtual 37;		// sendBytes(SS)V
+				L7:	return;
+		}
+
+		.method public entry_in_area(Ljavacard/framework/APDU;)V 10 {
+			.stack 2;
+			.locals 4;
+
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+				L0:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					invokevirtual 34;		// isValidated()Z
+					ifne L2;
+				L1:	sspush 25345;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L2:	aload_1;
+					invokevirtual 19;		// getBuffer()[B
+					astore_2;
+				L3:	aload_2;
+					sconst_4;
+					baload;
+					sstore_3;
+				L4:	aload_1;
+					invokevirtual 29;		// setIncomingAndReceive()S
+					s2b;
+					sstore 4;
+				L5:	sload_3;
+					sconst_1;
+					if_scmplt L7;
+				L6:	sload 4;
+					sconst_1;
+					if_scmpge L8;
+				L7:	sspush 26368;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L8:	aload_2;
+					sconst_5;
+					baload;
+					sspush 255;
+					sand;
+					sstore 5;
+				L9:	sload 5;
+					bspush 7;
+					if_scmple L11;
+				L10:	sspush 27264;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L11:	getfield_a_this 2;		// reference com/card/applet/BadgeEmployee.acces_areas
+					sload 5;
+					baload;
+					ifeq L13;
+				L12:	getfield_b_this 8;		// byte com/card/applet/BadgeEmployee.current_area
+					bspush 8;
+					if_scmpeq L14;
+				L13:	sspush 27010;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L14:	aload_0;
+					sload 5;
+					s2b;
+					putfield_b 8;		// byte com/card/applet/BadgeEmployee.current_area
+					return;
+		}
+
+		.method public exit_of_area(Ljavacard/framework/APDU;)V 11 {
+			.stack 2;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+				L0:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					invokevirtual 34;		// isValidated()Z
+					ifne L2;
+				L1:	sspush 25345;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L2:	getfield_b_this 8;		// byte com/card/applet/BadgeEmployee.current_area
+					bspush 8;
+					if_scmpeq L4;
+				L3:	getfield_b_this 7;		// byte com/card/applet/BadgeEmployee.in_company
+					ifne L5;
+				L4:	sspush 27010;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L5:	bspush 8;
+					putfield_b_this 8;		// byte com/card/applet/BadgeEmployee.current_area
+					return;
+		}
+
+		.method public exit_from_company(Ljavacard/framework/APDU;)V 12 {
+			.stack 3;
+			.locals 2;
+
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+				L0:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					invokevirtual 34;		// isValidated()Z
+					ifne L2;
+				L1:	sspush 25345;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L2:	aload_1;
+					invokevirtual 19;		// getBuffer()[B
+					astore_2;
+				L3:	aload_1;
+					invokevirtual 35;		// setOutgoing()S
+					sstore_3;
+				L4:	sload_3;
+					sconst_4;
+					if_scmpge L6;
+				L5:	sspush 26368;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+					goto L7;
+				L6:	aload_1;
+					sconst_4;
+					invokevirtual 36;		// setOutgoingLength(S)V
+					aload_0;
+					sconst_2;
+					invokestatic 31;		// javacardx/framework/time/TimeDuration.getInstance(B)Ljavacardx/framework/time/TimeDuration;
+					putfield_a 10;		// reference com/card/applet/BadgeEmployee.end_time
+					getfield_a_this 10;		// reference com/card/applet/BadgeEmployee.end_time
+					invokestatic 33;		// javacardx/framework/time/SysTime.uptime(Ljavacardx/framework/time/TimeDuration;)V
+					aload_0;
+					invokevirtual 39;		// update_time()V
+					aload_2;
+					sconst_0;
+					getfield_s_this 3;		// short com/card/applet/BadgeEmployee.hours_worked_today
+					s2b;
+					bastore;
+					aload_2;
+					sconst_1;
+					getfield_s_this 4;		// short com/card/applet/BadgeEmployee.minutes_worked_today
+					s2b;
+					bastore;
+					aload_2;
+					sconst_2;
+					getfield_b_this 5;		// byte com/card/applet/BadgeEmployee.hours_worked_current_month
+					bastore;
+					aload_2;
+					sconst_3;
+					getfield_b_this 6;		// byte com/card/applet/BadgeEmployee.minutes_worked_current_month
+					bastore;
+					aload_1;
+					sconst_0;
+					sconst_4;
+					invokevirtual 37;		// sendBytes(SS)V
+				L7:	return;
+		}
+
+		.method public update_time()V 13 {
+			.stack 6;
+			.locals 8;
+
+				L0:	getfield_a_this 10;		// reference com/card/applet/BadgeEmployee.end_time
+					getfield_a_this 9;		// reference com/card/applet/BadgeEmployee.start_time
+					invokevirtual 40;		// minus(Ljavacardx/framework/time/TimeDuration;)Ljavacardx/framework/time/TimeDuration;
+					astore_1;
+				L1:	sconst_4;
+					newarray 11;
+					astore_2;
+				L2:	sconst_0;
+					sstore_3;
+				L3:	sconst_4;
+					sstore 4;
+				L4:	aload_1;
+					aload_2;
+					sload_3;
+					sload 4;
+					sconst_3;
+					invokevirtual 41;		// toBytes([BSSS)S
+					pop;
+					aload_2;
+					sconst_0;
+					baload;
+					s2i;
+					sipush 255;
+					iand;
+					bipush 24;
+					ishl;
+					aload_2;
+					sconst_1;
+					baload;
+					s2i;
+					sipush 255;
+					iand;
+					bipush 16;
+					ishl;
+					ior;
+					aload_2;
+					sconst_2;
+					baload;
+					s2i;
+					sipush 255;
+					iand;
+					bipush 8;
+					ishl;
+					ior;
+					aload_2;
+					sconst_3;
+					baload;
+					s2i;
+					sipush 255;
+					iand;
+					ior;
+					istore 5;
+				L5:	iload 5;
+					iipush 60000;
+					idiv;
+					i2s;
+					sstore 7;
+				L6:	sload 7;
+					bspush 60;
+					sdiv;
+					sstore 8;
+				L7:	sload 7;
+					bspush 60;
+					srem;
+					sstore 7;
+					aload_0;
+					getfield_s_this 3;		// short com/card/applet/BadgeEmployee.hours_worked_today
+					sload 8;
+					sadd;
+					putfield_s 3;		// short com/card/applet/BadgeEmployee.hours_worked_today
+					aload_0;
+					getfield_s_this 4;		// short com/card/applet/BadgeEmployee.minutes_worked_today
+					sload 7;
+					sadd;
+					putfield_s 4;		// short com/card/applet/BadgeEmployee.minutes_worked_today
+					getfield_s_this 4;		// short com/card/applet/BadgeEmployee.minutes_worked_today
+					bspush 59;
+					if_scmple L9;
+				L8:	aload_0;
+					getfield_s_this 4;		// short com/card/applet/BadgeEmployee.minutes_worked_today
+					bspush 60;
+					sdiv;
+					getfield_s_this 3;		// short com/card/applet/BadgeEmployee.hours_worked_today
+					sadd;
+					putfield_s 3;		// short com/card/applet/BadgeEmployee.hours_worked_today
+					aload_0;
+					getfield_s_this 4;		// short com/card/applet/BadgeEmployee.minutes_worked_today
+					bspush 60;
+					srem;
+					putfield_s 4;		// short com/card/applet/BadgeEmployee.minutes_worked_today
+				L9:	return;
+		}
+
+		.method public check_complete_work(Ljavacard/framework/APDU;)V 14 {
+			.stack 3;
+			.locals 3;
+
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+				L0:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					invokevirtual 34;		// isValidated()Z
+					ifne L2;
+				L1:	sspush 25345;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L2:	aload_1;
+					invokevirtual 19;		// getBuffer()[B
+					astore_2;
+				L3:	aload_1;
+					invokevirtual 35;		// setOutgoing()S
+					sstore_3;
+				L4:	sload_3;
+					sconst_1;
+					if_scmpge L6;
+				L5:	sspush 26368;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+					goto L11;
+				L6:	aload_1;
+					sconst_1;
+					invokevirtual 36;		// setOutgoingLength(S)V
+					sspush 160;
+					getfield_b_this 5;		// byte com/card/applet/BadgeEmployee.hours_worked_current_month
+					sspush 255;
+					sand;
+					if_scmpgt L9;
+				L7:	sconst_1;
+					sstore 4;
+				L8:	goto L10;
+				L9:	sconst_0;
+					sstore 4;
+				L10:	aload_2;
+					sconst_0;
+					sload 4;
+					s2b;
+					bastore;
+					aload_1;
+					sconst_0;
+					sconst_1;
+					invokevirtual 37;		// sendBytes(SS)V
+				L11:	return;
+		}
+
+		.method public check_end_of_the_month(Ljavacard/framework/APDU;)V 15 {
+			.stack 5;
+			.locals 6;
+
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+				L0:	getfield_a_this 0;		// reference com/card/applet/BadgeEmployee.pin
+					invokevirtual 34;		// isValidated()Z
+					ifne L2;
+				L1:	sspush 25345;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L2:	aload_1;
+					invokevirtual 19;		// getBuffer()[B
+					astore_2;
+				L3:	aload_2;
+					sconst_4;
+					baload;
+					sstore_3;
+				L4:	aload_1;
+					invokevirtual 29;		// setIncomingAndReceive()S
+					s2b;
+					sstore 4;
+				L5:	sload_3;
+					sconst_1;
+					if_scmplt L9;
+				L6:	sload 4;
+					sconst_1;
+					if_scmplt L9;
+				L7:	sload_3;
+					sconst_3;
+					if_scmpgt L9;
+				L8:	sload 4;
+					sconst_3;
+					if_scmple L10;
+				L9:	sspush 26368;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+				L10:	sconst_3;
+					newarray 11;
+					astore 5;
+				L11:	sconst_0;
+					sstore 6;
+				L12:	goto L14;
+				L13:	aload 5;
+					sload 6;
+					aload_2;
+					sconst_5;
+					sload 6;
+					sadd;
+					s2b;
+					baload;
+					bastore;
+					sinc 6 1;
+				L14:	sload 6;
+					sload_3;
+					sconst_1;
+					ssub;
+					if_scmplt L13;
+				L15:	aload_1;
+					invokevirtual 35;		// setOutgoing()S
+					sstore 6;
+				L16:	sload 6;
+					sconst_1;
+					if_scmpge L18;
+				L17:	sspush 26368;
+					invokestatic 11;		// javacard/framework/ISOException.throwIt(S)V
+					goto L26;
+				L18:	aload_1;
+					sconst_1;
+					invokevirtual 36;		// setOutgoingLength(S)V
+					sconst_0;
+					sstore 7;
+				L19:	aload_0;
+					aload 5;
+					invokevirtual 42;		// is_the_last_day([B)Z
+					ifeq L26;
+				L20:	sspush 160;
+					getfield_b_this 5;		// byte com/card/applet/BadgeEmployee.hours_worked_current_month
+					sspush 255;
+					sand;
+					if_scmpgt L22;
+				L21:	bspush 10;
+					sstore 7;
+					goto L25;
+				L22:	getfield_b_this 5;		// byte com/card/applet/BadgeEmployee.hours_worked_current_month
+					sspush 255;
+					sand;
+					sspush 152;
+					if_scmplt L24;
+				L23:	bspush -96;
+					getfield_b_this 5;		// byte com/card/applet/BadgeEmployee.hours_worked_current_month
+					ssub;
+					s2b;
+					sstore 7;
+					goto L25;
+				L24:	bspush 9;
+					sstore 7;
+				L25:	aload_2;
+					sconst_0;
+					sload 7;
+					bastore;
+					aload_1;
+					sconst_0;
+					sconst_1;
+					invokevirtual 37;		// sendBytes(SS)V
+				L26:	return;
+		}
+
+		.method public is_the_last_day([B)Z 16 {
+			.stack 2;
+			.locals 3;
+
+				L0:	aload_1;
+					sconst_0;
+					baload;
+					sstore_2;
+				L1:	aload_1;
+					sconst_1;
+					baload;
+					sstore_3;
+				L2:	aload_1;
+					sconst_2;
+					baload;
+					sstore 4;
+				L3:	sload_3;
+					sconst_2;
+					if_scmpne L7;
+				L4:	sload 4;
+					sconst_4;
+					srem;
+					ifne L7;
+				L5:	sload_2;
+					bspush 28;
+					if_scmpne L7;
+				L6:	sconst_1;
+					sreturn;
+				L7:	sload_2;
+					bspush 29;
+					if_scmpne L11;
+				L8:	sload_3;
+					sconst_2;
+					if_scmpne L11;
+				L9:	sload 4;
+					sconst_4;
+					srem;
+					ifeq L11;
+				L10:	sconst_1;
+					sreturn;
+				L11:	sload_2;
+					bspush 30;
+					if_scmpne L17;
+				L12:	sload_3;
+					sconst_4;
+					if_scmpeq L16;
+				L13:	sload_3;
+					bspush 6;
+					if_scmpeq L16;
+				L14:	sload_3;
+					bspush 9;
+					if_scmpeq L16;
+				L15:	sload_3;
+					bspush 11;
+					if_scmpne L17;
+				L16:	sconst_1;
+					sreturn;
+				L17:	sload_2;
+					bspush 31;
+					if_scmpne L19;
+				L18:	sconst_1;
+					sreturn;
+				L19:	sconst_0;
+					sreturn;
+		}
+
+	}
+
+}
